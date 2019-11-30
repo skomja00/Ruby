@@ -24,6 +24,28 @@ class DoubleLinkedList
     h.next = nil;
   end
 
+  def carry(a, b)
+    return (a.to_i + b.to_i) / 10 if !a.nil? && !b.nil?;
+    return 0 if a.nil? || b.nil?
+  end
+
+  def +(b)
+    a = self.last;
+    b = b.last;
+    d = DoubleLinkedList.new((a.value.to_i + b.value.to_i) % 10);
+    c = carry(a, b);
+    a = a.prev;
+    b = b.prev;
+    while (!a.nil? || !b.nil?)
+      d.prepend((a.value.to_i + b.value.to_i) % 10 + c);
+      c = carry(a, b);
+      a = a.prev;
+      b = b.prev;
+    end
+    d.prepend(c) if c > 0;
+    return d;
+  end
+
   #add to the end of the list
   def append(value)
     a = Node.new(value);
@@ -68,5 +90,9 @@ d1.prepend(2);
 d2 = DoubleLinkedList.new(5);
 d2.append("6");
 d2.append("4");
+d3 = d1 + d2;
 d1.myprint;
+print " + ";
 d2.myprint;
+print " = ";
+d3.myprint;
