@@ -1,4 +1,4 @@
 **Backtracking**  
 Backtracking is an algorithm for finding all solutions by exploring all potential candidates. If the solution candidate turns to be not a solution (or at least not the last one), backtracking algorithm discards it by making some changes on the previous step, i.e. backtracks and then try again.
 
-Try every single pattern. We start from the first and repeat the process until the solution is reached. When stuck, backtrack.
+Try every single pattern from the first and repeat the process until the solution is reached. When stuck, backtrack.
