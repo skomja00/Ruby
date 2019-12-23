@@ -15,7 +15,7 @@ end
 ```
 
 - Output:  
-![Sample Palindrome output:](https://github.com/skomja00/Ruby-programming-sandbox/blob/master/Palindrome/pal_output.png?raw=true)
+![Sample Palindrome output:](https://github.com/skomja00/Ruby/blob/master/Palindrome/pal_output.png)
 
   
   
